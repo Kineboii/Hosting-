@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Queen Ruva AI Bot Hosting Platform</title>
+    <style>
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-size: 2em;
+            z-index: 1000;
+        }
+
+        #loading-text {
+            text-align: center;
+            animation: fade 1.5s infinite;
+        }
+
+        @keyframes fade {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* Main Content Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://files.catbox.moe/n3ubmi.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            visibility: hidden; /* Hide main content initially */
+        }
+
+        header {
+            background-color: rgba(156, 39, 176, 0.9); /* Semi-transparent purple */
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        header img {
+            width: 50px; /* Slightly larger logo */
+            height: auto;
+            border-radius: 50%; /* Circular logo */
+        }
+
+        h2 {
+            color: #f0f0f0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7); /* Darkened background for better contrast */
+            border-radius: 15px;
+            margin: 50px auto;
+            max-width: 90%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .hosting-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .link-box {
+            background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent dark background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .link-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+
+        .link-box h3 {
+            margin-bottom: 15px;
+            color: #9c27b0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .link-box a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #9c27b0;
+            display: inline-block;
+        }
+
+        .link-box a:hover {
+            background-color: #8e24aa;
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-links img {
+            width: 30px;
+            height: auto;
+        }
+
+h1{
+  color: red;
+}
+        footer {
+            background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent dark background */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+            }
+
+            .hosting-links {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div id="loading-text">Loading Queen Ruva AI Beta...</div>
+    </div>
+
+    <!-- Main Content -->
+    <header>
+        <img src="https://files.catbox.moe/n3ubmi.jpg" alt="Queen Ruva AI Logo">
+        Queen Ruva AI Bot Hosting Platform
+    </header>
+
+    <div class="content">
+      <h1>sign up </h1>
+        <h2>Choose Your Hosting Provider:</h2>
+        
+        <div class="hosting-links">
+            <div class="link-box">
+                <h3>Bot Hosting</h3>
+                <a href="https://bot-hosting.net/?aff=1336281489364484136" target="_blank">Deploy on Discord</a>
+            </div>
+
+            <div class="link-box">
+                <h3>Katabump Hosting</h3>
+                <a href="https://dashboard.katabump.com/auth/login#0d9140" target="_blank">Deploy on Katabump</a>
+            </div>
+
+            <div class="link-box">
+                <h3>Solar Hosting</h3>
+                <a href="https://account.solarhosting.cc/register?ref=FDSbvX2o" target="_blank">Deploy on Solar</a>
+            </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="social-links">
+                <a href="https://whatsapp.com/channel/0029ValX2Js9RZAVtDgMYj0r" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+                    WhatsApp
+                </a>
+                <a href="https://youtube.com/@iconictechofficial?si=KYgiyP4HcjPMYKBG" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_(2017).svg" alt="YouTube Logo">
+                    YouTube
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Queen Ruva AI Bot | Created by Iconic Tech
+    </footer>
+
+    <script>
+        // Loading Screen Logic
+        const loadingScreen = document.getElementById('loading-screen');
+        const loadingText = document.getElementById('loading-text');
+        const body = document.body;
+
+        const messages = [
+            "Loading Queen Ruva AI Beta...",
+            "Developer by Iconic Tech...",
+            "Initializing Hosting Platform..."
+        ];
+
+        let index = 0;
+
+        const changeMessage = () => {
+            loadingText.textContent = messages[index];
+            index = (index + 1) % messages.length;
+        };
+
+        // Change message every second
+        const interval = setInterval(changeMessage, 1000);
+
+        // Hide loading screen after 3 seconds
+        setTimeout(() => {
+            clearInterval(interval);
+            loadingScreen.style.display = 'none'; // Hide loading screen
+            body.style.visibility = 'visible'; // Use visibility instead of display to preserve layout
+        }, 3000);
+    </script>
+
+</body>
+  </html>
